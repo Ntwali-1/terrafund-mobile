@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Land Owner Dashboard</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d421",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b0f] dark:text-white transition-colors duration-300">
+<!-- Root Container (Phone Form Factor simulation context) -->
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden border-x border-gray-100 dark:border-gray-800 shadow-xl bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="Portrait of a friendly smiling male farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtW9Y7Cne6f0kprwzqDmBBbednODDmVF84_MC1xNyU5xwNHwk2QugWQ7_FThsLE2xGiYQygc7RubMz07gX5E39hzEVwAbS8vCraEdbvLFr40XYtUT8DiuNW8jZGKSMCQR2lE7aYk7nOyZpDnvaXx0hQ-v8S082pfEhhCRe_lttFUmE8eaRbUq7RUim0aAS9Nkz87hmZlJgFKfLw9CoAzeOb29A5-JjYusMeLIyOA05YJNGDwNw3VkWPvbYWLN9tVvfk3jINrgUJSPO");'>
+</div>
+</div>
+<div class="flex-1 px-3">
+<p class="text-xs text-[#4c9a52] font-medium leading-none mb-1">Welcome back</p>
+<h2 class="text-[#0d1b0f] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Kofi Mensah 👋</h2>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="relative flex cursor-pointer items-center justify-center rounded-xl h-10 w-10 bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-red-500"></span>
+</button>
+</div>
+</div>
+<!-- Metric Grid (2x2) -->
+<div class="p-4 grid grid-cols-2 gap-4">
+<!-- Total Land Posted -->
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-[#cfe7d1] dark:border-green-900 bg-white dark:bg-gray-800 shadow-sm">
+<div class="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg w-fit">
+<span class="material-symbols-outlined text-primary">potted_plant</span>
+</div>
+<div>
+<p class="text-[#4c9a52] text-xs font-semibold uppercase tracking-wider">Total Land</p>
+<p class="text-[#0d1b0f] dark:text-white tracking-tight text-xl font-extrabold leading-tight">12.5 Ha</p>
+</div>
+</div>
+<!-- Active Investors -->
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-[#cfe7d1] dark:border-green-900 bg-white dark:bg-gray-800 shadow-sm">
+<div class="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg w-fit">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<div>
+<p class="text-[#4c9a52] text-xs font-semibold uppercase tracking-wider">Investors</p>
+<p class="text-[#0d1b0f] dark:text-white tracking-tight text-xl font-extrabold leading-tight">4 Active</p>
+</div>
+</div>
+<!-- Ongoing Farms -->
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-[#cfe7d1] dark:border-green-900 bg-white dark:bg-gray-800 shadow-sm">
+<div class="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg w-fit">
+<span class="material-symbols-outlined text-primary">agriculture</span>
+</div>
+<div>
+<p class="text-[#4c9a52] text-xs font-semibold uppercase tracking-wider">Ongoing</p>
+<p class="text-[#0d1b0f] dark:text-white tracking-tight text-xl font-extrabold leading-tight">3 Projects</p>
+</div>
+</div>
+<!-- Total Earnings -->
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-[#cfe7d1] dark:border-green-900 bg-white dark:bg-gray-800 shadow-sm">
+<div class="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg w-fit">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<div>
+<p class="text-[#4c9a52] text-xs font-semibold uppercase tracking-wider">Earnings</p>
+<p class="text-[#0d1b0f] dark:text-white tracking-tight text-xl font-extrabold leading-tight">$2,450.00</p>
+</div>
+</div>
+</div>
+<!-- SingleButton CTA -->
+<div class="px-4 py-2">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-16 px-6 bg-primary text-white gap-3 shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" style="font-size: 28px;">add_circle</span>
+<div class="flex flex-col items-start">
+<span class="text-lg font-bold leading-none">Post My Land</span>
+<span class="text-xs font-medium opacity-90">Register new plots for investment</span>
+</div>
+</button>
+</div>
+<!-- SectionHeader -->
+<div class="flex items-center justify-between px-4 pt-6 pb-2">
+<h3 class="text-[#0d1b0f] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Recent Activity</h3>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<!-- Activity List -->
+<div class="flex flex-col px-4 pb-24">
+<!-- ListItem 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 rounded-xl mb-3 px-4 min-h-[72px] py-3 justify-between border border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-full bg-[#e7f3e8] dark:bg-green-950 shrink-0 size-12">
+<span class="material-symbols-outlined">person_search</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold leading-tight">New investor inquiry</p>
+<p class="text-[#4c9a52] text-sm font-medium line-clamp-1">John Doe is interested in Plot B</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-[#4c9a52] text-xs font-semibold">2h ago</p>
+</div>
+</div>
+<!-- ListItem 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 rounded-xl mb-3 px-4 min-h-[72px] py-3 justify-between border border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-blue-600 flex items-center justify-center rounded-full bg-blue-50 dark:bg-blue-950 shrink-0 size-12">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold leading-tight">Plot Verified</p>
+<p class="text-[#4c9a52] text-sm font-medium line-clamp-1">Sector 7 inspection complete</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-[#4c9a52] text-xs font-semibold">Yesterday</p>
+</div>
+</div>
+<!-- ListItem 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-gray-800/50 rounded-xl mb-3 px-4 min-h-[72px] py-3 justify-between border border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-amber-600 flex items-center justify-center rounded-full bg-amber-50 dark:bg-amber-950 shrink-0 size-12">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold leading-tight">Payout Processed</p>
+<p class="text-[#4c9a52] text-sm font-medium line-clamp-1">Q3 Maize farm harvest profit</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-[#4c9a52] text-xs font-semibold">3 days ago</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="fixed bottom-0 w-full max-w-[480px] bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-6 flex justify-between items-center z-20">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-bold">My Land</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold">Wallet</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-[10px] font-bold">Support</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</button>
+</div>
+<!-- Safe Area Spacer -->
+<div class="h-10 bg-background-light dark:bg-background-dark"></div>
+</div>
+</body></html>

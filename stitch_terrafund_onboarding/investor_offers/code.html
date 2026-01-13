@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Investor Offers</title>
+<!-- Material Symbols Link -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d421",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d1b0f] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-200 dark:border-gray-800">
+<div class="text-[#0d1b0f] dark:text-white flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</div>
+<h2 class="text-[#0d1b0f] dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Investor Offers</h2>
+<div class="size-10 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-6 pb-24">
+<!-- Offer Card 1 -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 bg-white dark:bg-zinc-900 overflow-hidden">
+<div class="p-4 flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center border border-gray-200" data-alt="Portrait of a smiling male investor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeeIrFr-Bh6t0vvx7fU4PYJhkRUMAfzPaMR0VTHN6pYMrHaspjxT34L8TaCwa2MjD0_LhD4b-v4Pf0sTFeEqUK8rhUIzAv466o0Ykfzcw5HBGh5MCMuCnJGKROc0ngdsTwO0e2mkf0HXCXz_hX1Kj1Cn140_aruIW04Hmo0HNmh9gyyXRAG13lcFYXIgoaWeyq8k98WEGYdq8u6EhTc87dOEZZr14y6-rrdMC7DlCTF_yHSsvFLjuwIa_ggymH6UICDRpvl29uBp5S")'></div>
+<div>
+<div class="flex items-center gap-1">
+<p class="text-[#0d1b0f] dark:text-white font-bold text-base">John Doe</p>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified">verified</span>
+</div>
+<p class="text-gray-500 text-xs">Agri-Tech Venture Partner</p>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex flex-col gap-1">
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Deal Type: Share Harvest</p>
+<p class="text-[#0d1b0f] dark:text-white text-3xl font-extrabold tracking-tight">$15,000 Offered</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4 py-3 border-y border-gray-100 dark:border-gray-800">
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold">Expected ROI</p>
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">12% Annually</p>
+</div>
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold">Duration</p>
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">3 Seasons</p>
+</div>
+</div>
+</div>
+<!-- Button Group -->
+<div class="flex flex-col gap-2 p-4 pt-0">
+<div class="flex gap-2">
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 bg-primary text-white text-sm font-bold shadow-md active:scale-95 transition-transform">
+<span>Accept</span>
+</button>
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 border-2 border-[#795548] text-[#795548] dark:text-[#a1887f] dark:border-[#a1887f] text-sm font-bold active:scale-95 transition-transform">
+<span>Negotiate</span>
+</button>
+</div>
+<button class="w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-zinc-800 text-red-500 text-sm font-bold active:scale-95 transition-transform">
+<span>Reject</span>
+</button>
+</div>
+</div>
+<!-- Offer Card 2 -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 bg-white dark:bg-zinc-900 overflow-hidden">
+<div class="p-4 flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center border border-gray-200" data-alt="Portrait of a female professional investor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA51oNegtXt1YvufnEl0LGv0m-7-lGwGOWNL2yqtzYeha2BhH8EiBTejByYiJWLggOSrAJcgfdmFU9aGFuvM-1Su3xm33ET00PlpjZv-Y24NEa6rVOcTMoKE2MLjzvXRxfUxl5qdarZtqbyxve_13krfJEz3r_hZea6AN-B62fkPeAypBnmEl-AMufeEpAEJ5r5Ewutpf8v4PiFjQMiG4Psce1l4Nk8VAkIG-05Oruc5bExPQE_CPiCr_ptLxW_-Ps6XfUlOA7DlJqu")'></div>
+<div>
+<div class="flex items-center gap-1">
+<p class="text-[#0d1b0f] dark:text-white font-bold text-base">Sarah Smith</p>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified">verified</span>
+</div>
+<p class="text-gray-500 text-xs">Sustainability Fund Manager</p>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Deal Type: Lease Agreement</p>
+<span class="bg-amber-100 text-amber-700 text-[10px] px-2 py-0.5 rounded-full font-bold">Expiring in 2d</span>
+</div>
+<p class="text-[#0d1b0f] dark:text-white text-3xl font-extrabold tracking-tight">$22,500 Offered</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4 py-3 border-y border-gray-100 dark:border-gray-800">
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold">Expected ROI</p>
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">10% fixed</p>
+</div>
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold">Duration</p>
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">5 Years</p>
+</div>
+</div>
+</div>
+<!-- Button Group -->
+<div class="flex flex-col gap-2 p-4 pt-0">
+<div class="flex gap-2">
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 bg-primary text-white text-sm font-bold shadow-md active:scale-95 transition-transform">
+<span>Accept</span>
+</button>
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 border-2 border-[#795548] text-[#795548] dark:text-[#a1887f] dark:border-[#a1887f] text-sm font-bold active:scale-95 transition-transform">
+<span>Negotiate</span>
+</button>
+</div>
+<button class="w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-zinc-800 text-red-500 text-sm font-bold active:scale-95 transition-transform">
+<span>Reject</span>
+</button>
+</div>
+</div>
+<!-- Offer Card 3 (New/Draft) -->
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 bg-white dark:bg-zinc-900 overflow-hidden opacity-80">
+<div class="p-4 flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center border border-gray-200" data-alt="Portrait of a male professional investor in a suit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3ecGc2zVzqk0f-pgLG2u4pV5y9tzEnpTOmmADfddtttk17Ize3AXvr3oXj2XfTeNcVkpzTJEZpKEWEMwwntc63neVeNckwTQkgzoJJs3IOcCjXPbG6YfTt_pNSCCw9uflOCsl_a1MergzI76BRKpjRieAvxIplia5f9VbyJKCaa3KAGlSo1i0TNizptaIp1FdeMFaNX4Y6tFk6aq6yPKDVKHpZhEIktspyBsbHYdf1lpRrq1M0JN12NrtdndXckh9ndHdNHTJt_mZ")'></div>
+<div>
+<div class="flex items-center gap-1">
+<p class="text-[#0d1b0f] dark:text-white font-bold text-base">Marcus Chen</p>
+</div>
+<p class="text-gray-500 text-xs">Private Investor</p>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex flex-col gap-1">
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Deal Type: Equity Share</p>
+<p class="text-[#0d1b0f] dark:text-white text-3xl font-extrabold tracking-tight">$8,200 Offered</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4 py-3 border-y border-gray-100 dark:border-gray-800">
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold">Expected ROI</p>
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">Variable</p>
+</div>
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold">Duration</p>
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">Unlimited</p>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex flex-col gap-2 p-4 pt-0">
+<div class="flex gap-2">
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 bg-primary text-white text-sm font-bold shadow-md">
+<span>Accept</span>
+</button>
+<button class="flex-1 cursor-pointer items-center justify-center rounded-lg h-12 border-2 border-[#795548] text-[#795548] dark:text-[#a1887f] dark:border-[#a1887f] text-sm font-bold">
+<span>Negotiate</span>
+</button>
+</div>
+<button class="w-full cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-zinc-800 text-red-500 text-sm font-bold">
+<span>Reject</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Tab Bar Mockup (standard iOS) -->
+<footer class="fixed bottom-0 w-full max-w-[430px] h-20 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 flex justify-around items-center px-4 pb-4">
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-[10px] font-bold">Offers</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="landscape">landscape</span>
+<span class="text-[10px] font-bold">Land</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</footer>
+</div>
+</body></html>

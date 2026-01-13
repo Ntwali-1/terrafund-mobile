@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Land Investment Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d421",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b0f] dark:text-white transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full max-w-[430px] mx-auto flex-col overflow-x-hidden pb-32">
+<!-- Top Navigation -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between">
+<div class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white">arrow_back_ios_new</span>
+</div>
+<h2 class="text-[#0d1b0f] dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Plot Details</h2>
+<div class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white">share</span>
+</div>
+</div>
+<!-- Header Image Gallery -->
+<div class="px-4 py-2">
+<div class="relative group">
+<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-72 shadow-lg" data-alt="Lush green agricultural land with fertile soil" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLxsAPqZiNm-U7zmZHcLR0lzemIlSuKjYkafD2dHYGOf-iKOcmEfzBAMqj3p3E_RFf7JgOs2aGU4H8FmBwPgjmCVk_6NSnj3R_Ya5523qOtAqwBp0MgJlh5Pds-lifJdPxFTpRVyvJTMCYA798pLZ6DmLPjXqxs_IjguDadwpVPhd7p_XFK2yQPlbp3bwhYKK0KWO03kwWnEf1YrC3q2RzGhzshWwlIx6Quu1O89COeaku2bNytiKSQeXHavjusz00j9sk1gyPXH6z");'>
+<div class="flex justify-center gap-2 p-5">
+<div class="size-2 rounded-full bg-primary"></div>
+<div class="size-2 rounded-full bg-white opacity-50"></div>
+<div class="size-2 rounded-full bg-white opacity-50"></div>
+<div class="size-2 rounded-full bg-white opacity-50"></div>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/60 px-3 py-1 rounded-full backdrop-blur-sm">
+<p class="text-[10px] font-bold uppercase tracking-wider text-primary">New Listing</p>
+</div>
+</div>
+</div>
+<!-- Section Header & Title -->
+<div class="px-4 pt-4">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-[#0d1b0f] dark:text-white text-2xl font-extrabold leading-tight tracking-tight">Green Valley Plot #42</h2>
+<p class="text-primary dark:text-primary/80 text-sm font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Nairobi, Kenya • 50 Acres
+                    </p>
+</div>
+<div class="text-right">
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Valuation</p>
+<p class="text-xl font-extrabold text-[#0d1b0f] dark:text-white">$125,000</p>
+</div>
+</div>
+</div>
+<!-- Farmer Profile Badge -->
+<div class="mx-4 mt-6 p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full bg-center bg-cover border-2 border-primary/20" data-alt="Professional portrait of a local farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTfrSdHEiPo-5J-NsGxukrlZYKRLdcuDa9z48pvOs-d9fVBTPbzWcWg-H-EVotKVQzlhQ3fZIgWIKGr9DLJ-PFNri24LFKKh5xo1azdYy5yHQrhZ8yH74IuaCEWSqJyG7YnEOT-Jp0WVA_W9twjwApqKZz2718ADyFlIjUiMl5GP7MExFwBImz7ioDp10MrkEUhEUulhzHuZTtrwXsk8j8cvLg2FHoN-j7dHqfvqjvAE9IGVQ9g6VQlIXTVDfLRP2GgDATNOOGsz-T");'></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<p class="text-[#0d1b0f] dark:text-white text-base font-bold">Samuel Okoth</p>
+<span class="material-symbols-outlined text-primary text-[18px] font-bold">verified</span>
+</div>
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-medium">Land Owner • 4.9 Rating (12 Deals)</p>
+</div>
+</div>
+<div class="bg-primary/10 px-3 py-2 rounded-lg text-primary text-xs font-bold">
+                    MEMBER 3Y
+                </div>
+</div>
+</div>
+<!-- Soil Quality Details -->
+<div class="px-4 mt-8">
+<h3 class="text-[#0d1b0f] dark:text-white text-lg font-bold mb-4">Soil &amp; Technical Data</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">science</span>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">pH Level</p>
+</div>
+<p class="text-[#0d1b0f] dark:text-white font-bold">6.5 (Optimal)</p>
+</div>
+<div class="p-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">water_drop</span>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Irrigation</p>
+</div>
+<p class="text-[#0d1b0f] dark:text-white font-bold">Full Borehole</p>
+</div>
+<div class="p-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">grass</span>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Organic Matter</p>
+</div>
+<p class="text-[#0d1b0f] dark:text-white font-bold">4.2%</p>
+</div>
+<div class="p-3 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Previous Crop</p>
+</div>
+<p class="text-[#0d1b0f] dark:text-white font-bold">Maize &amp; Soy</p>
+</div>
+</div>
+</div>
+<!-- Financial Projection Graph Section -->
+<div class="px-4 mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-[#0d1b0f] dark:text-white text-lg font-bold">Financial Projections</h3>
+<div class="flex items-center gap-1 text-primary text-xs font-bold">
+<span class="material-symbols-outlined text-sm">description</span>
+                    View Prospectus
+                </div>
+</div>
+<div class="p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-zinc-800">
+<div class="flex justify-between items-end mb-6">
+<div>
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-medium">Est. Annual Yield</p>
+<p class="text-2xl font-extrabold text-[#0d1b0f] dark:text-white">12.4% <span class="text-xs font-bold text-primary">ROI</span></p>
+</div>
+<div class="text-right">
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Risk Level</p>
+<p class="text-xs font-bold px-2 py-1 bg-primary/20 text-primary rounded-md inline-block">LOW</p>
+</div>
+</div>
+<!-- Abstract Graph Visualization -->
+<div class="relative h-24 w-full flex items-end gap-1">
+<div class="h-1/4 w-full bg-primary/10 rounded-t-sm"></div>
+<div class="h-2/5 w-full bg-primary/20 rounded-t-sm"></div>
+<div class="h-1/2 w-full bg-primary/30 rounded-t-sm"></div>
+<div class="h-3/5 w-full bg-primary/40 rounded-t-sm"></div>
+<div class="h-2/3 w-full bg-primary/60 rounded-t-sm"></div>
+<div class="h-3/4 w-full bg-primary/80 rounded-t-sm"></div>
+<div class="h-full w-full bg-primary rounded-t-sm"></div>
+<!-- Legend -->
+<div class="absolute bottom-0 left-0 w-full flex justify-between px-1 -mb-6">
+<span class="text-[10px] text-zinc-400 font-bold">2024</span>
+<span class="text-[10px] text-zinc-400 font-bold">2030</span>
+</div>
+</div>
+<div class="mt-10 flex gap-4 border-t border-zinc-50 dark:border-zinc-800 pt-4">
+<div class="flex-1">
+<p class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">MIN INVEST</p>
+<p class="text-lg font-bold">$2,500</p>
+</div>
+<div class="flex-1">
+<p class="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">TERM</p>
+<p class="text-lg font-bold">5 Years</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Deal Options Toggle -->
+<div class="px-4 mt-8 pb-10">
+<h3 class="text-[#0d1b0f] dark:text-white text-lg font-bold mb-4">Deal Options</h3>
+<div class="flex p-1 bg-zinc-100 dark:bg-zinc-800 rounded-xl">
+<button class="flex-1 py-2 text-sm font-bold rounded-lg bg-white dark:bg-zinc-900 shadow-sm text-[#0d1b0f] dark:text-white transition-all">Rent</button>
+<button class="flex-1 py-2 text-sm font-bold text-zinc-500 dark:text-zinc-400">Share</button>
+<button class="flex-1 py-2 text-sm font-bold text-zinc-500 dark:text-zinc-400">Buy</button>
+</div>
+<p class="mt-4 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed italic">
+                * Renting gives you exclusive farming rights for the season. Returns are based on direct crop yields minus service fees.
+            </p>
+</div>
+<!-- Sticky Bottom Action Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] p-6 bg-white/90 dark:bg-background-dark/95 backdrop-blur-xl border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-3 z-50">
+<div class="flex gap-3">
+<button class="flex-1 h-14 bg-white dark:bg-zinc-800 border-2 border-primary text-primary font-bold rounded-xl transition-active active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">send</span>
+                    Send Offer
+                </button>
+<button class="flex-[1.5] h-14 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/30 transition-active active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+                    Invest Now
+                </button>
+</div>
+<div class="w-24 h-1 bg-zinc-300 dark:bg-zinc-700 mx-auto rounded-full mt-2"></div>
+</div>
+</div>
+</body></html>

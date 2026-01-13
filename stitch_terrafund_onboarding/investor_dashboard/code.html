@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Investor Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d421",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b0f] dark:text-white antialiased">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between border-b border-black/5 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-center bg-no-repeat bg-cover border-2 border-primary" data-alt="User profile photo of a professional man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDngqmI_FRzt9L0An8Ra22-n-2IMCakdaopKbvZz1ua4D5Y_fmjjN0ySqPXC8fLmN6xM19KEWtIclzRPTQoe7Eg_L66JUZ30gTtiB20t00NQGPCTt20Fn3JJ6eFfHOL_CLHmRdmPO2gUH6OZ89Y2pmi_52G5vQiOFauk9U6NwnGNf1jFDzhYzyUzDonXhJkKN9PqvR668xWiBogxaFLffFEnEJddw8rm_4LShtrGjoC_DaYm1ZZORAyZJMQdpNMEoIXXj4U_P3UNpti");'>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Welcome back,</p>
+<p class="text-sm font-bold leading-none">Alex Mitchell</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-white dark:bg-neutral-800 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="pb-24">
+<!-- Hero Wallet Card -->
+<div class="p-4 @container">
+<div class="relative overflow-hidden flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-neutral-900 border border-black/5 dark:border-white/5">
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Total Invested</p>
+<h1 class="text-3xl font-extrabold tracking-tight mt-1">$42,850.00</h1>
+</div>
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-6">
+<span class="flex items-center text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs mr-1">trending_up</span>
+                            +12.5%
+                        </span>
+<span class="text-xs text-gray-400">vs last quarter</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex-1 bg-primary text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Invest</span>
+</button>
+<button class="flex-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 font-bold py-3 rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>Withdraw</span>
+</button>
+</div>
+</div>
+<!-- Mini Stats Overlay at bottom of hero card -->
+<div class="flex border-t border-black/5 dark:border-white/5 bg-neutral-50/50 dark:bg-neutral-800/50">
+<div class="flex-1 p-4 text-center border-r border-black/5 dark:border-white/5">
+<p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Active Farms</p>
+<p class="font-bold">14</p>
+</div>
+<div class="flex-1 p-4 text-center">
+<p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Total Profit</p>
+<p class="font-bold text-primary">+$5,120.40</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-4 pb-2 pt-4">
+<h2 class="text-lg font-bold tracking-tight">Next Harvest Payout</h2>
+<button class="text-primary text-sm font-bold">View Calendar</button>
+</div>
+<!-- Highlight Card: Next Harvest -->
+<div class="p-4">
+<div class="bg-white dark:bg-neutral-900 rounded-xl p-4 shadow-sm border border-black/5 dark:border-white/5">
+<div class="flex gap-4 items-center">
+<div class="size-20 shrink-0 bg-center bg-no-repeat bg-cover rounded-lg" data-alt="Aerial view of a lush green maize plantation" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBG6pkj0nf3Yb5m7ydxIIPrNmg4wqjDqJ8Dy5MdcM4RB_4GB5_6ORxlAfMBb9ltlf7f6Tb6xmRjvdsF13fmIYLuG7ONbtVKnATf9H4n8XzxjEMMgVn_cg8AXJFRwcFlnj4H4qr4kLQrFlYsQauSfYOMi_1qI0tNAY3h3aB8sWGm5VnBOwDazXsAJLHiWq7ur6F2OJ5tE9Iq5-XPBCxK0ctCU3z5rNkYgczrcpvTxxobfDLr7JpnsBndo5lE2uY5H0jZJghkbSrlqFd6");'>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-base">Maize Plantation #42</h3>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5 rounded">85% Maturation</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Expected: <span class="text-[#0d1b0f] dark:text-white font-bold">$1,240.00</span></p>
+<div class="mt-3 flex items-center gap-2">
+<div class="flex-1 h-1.5 bg-neutral-100 dark:bg-neutral-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<span class="text-[11px] font-bold text-gray-400">12 Days</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-4 pb-2 pt-4">
+<h2 class="text-lg font-bold tracking-tight">Portfolio Performance</h2>
+<button class="text-gray-400 text-sm font-medium">All Time</button>
+</div>
+<!-- Stats Grid -->
+<div class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-5 border border-black/5 dark:border-white/5 bg-white dark:bg-neutral-900 shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary text-xl">potted_plant</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider">Acres Funded</p>
+<p class="text-xl font-bold">124.5</p>
+</div>
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-5 border border-black/5 dark:border-white/5 bg-white dark:bg-neutral-900 shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary text-xl">diversity_3</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider">Farmers Supported</p>
+<p class="text-xl font-bold">8</p>
+</div>
+</div>
+<!-- Recent Activity List -->
+<div class="px-4 pb-2 pt-4">
+<h2 class="text-lg font-bold tracking-tight mb-4">Recent Activity</h2>
+<div class="space-y-3">
+<!-- Activity Item 1 -->
+<div class="flex items-center justify-between p-3 bg-white dark:bg-neutral-900 rounded-xl border border-black/5 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600">clover_spark</span>
+</div>
+<div>
+<p class="text-sm font-bold">New Investment</p>
+<p class="text-xs text-gray-400">Cassava Farm #08 • 2h ago</p>
+</div>
+</div>
+<p class="text-sm font-bold text-red-500">-$500.00</p>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex items-center justify-between p-3 bg-white dark:bg-neutral-900 rounded-xl border border-black/5 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">savings</span>
+</div>
+<div>
+<p class="text-sm font-bold">Harvest Payout</p>
+<p class="text-xs text-gray-400">Rice Fields G-4 • Yesterday</p>
+</div>
+</div>
+<p class="text-sm font-bold text-primary">+$840.50</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Tab Navigation (iOS Style) -->
+<footer class="fixed bottom-0 w-full bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl border-t border-black/5 dark:border-white/5 px-6 pt-3 pb-8 flex justify-between items-center z-[100]">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold">Portfolio</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">Market</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</footer>
+</body></html>

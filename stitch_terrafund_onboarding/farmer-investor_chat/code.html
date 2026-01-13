@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Farmer-Investor Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d421",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b0f] dark:text-white">
+<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden border-x border-gray-100 dark:border-gray-800 shadow-xl">
+<!-- Header / TopAppBar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center p-1 -ml-2">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white">chevron_left</span>
+</button>
+<div class="size-10 shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Portrait of a friendly farmer smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0CMAY5G93U68yGlaChxD3jOkeg38Qd_byDYOMeQuz8ySDd6b4m8H0CoWRUTJokY70ozQYCTVyfwswJmvN_99pMRuyYChrr0uwUl1ZyAKfl93ulc4jE-1PBeLh0M8VoHSkJWLqAlbFGdQYklxwZOdM_00fBPrdW15vAYu86AzKSpsrfcyPB_Wk38WrfMrIFoZe5S-9c9mneuPOQCRfnUIv7Ux_TiHb9rE48uAEJSMGEOxtFfV7LRfg43FOuDlO4eFmN55Ndsx-maHH");'>
+</div>
+</div>
+<div>
+<h2 class="text-[#0d1b0f] dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">Kofi Mensah</h2>
+<div class="flex items-center gap-1.5">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-[#4c9a52] text-xs font-medium">Maize Farmer • Active now</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white" style="font-size: 20px;">info</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Chat Content -->
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-6">
+<!-- Date Divider -->
+<div class="flex justify-center">
+<p class="text-[#4c9a52] text-xs font-semibold uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Yesterday</p>
+</div>
+<!-- Received Message -->
+<div class="flex items-end gap-3 max-w-[85%]">
+<div class="size-8 shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Small profile icon of the farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-r4fh0sIWA9n3-9eYhTl5uMx5dCeW2x-CQjVdBykNugjPw26XH7X_h_Ry8LOQ5KUprFhjkKlGwc0JnBjR9ZGiEs6WFYAGqRo68SDzdnpuC4ynZkbtSiuzg3DW2Zwu2YCAqS_Ccm8cLruV_HYsN-AiiuWkpwM6ctSysm9lXU3yDbV8wwc30GL4C6Tx0jYAigLy5JXd12XbwAr34_S2bu1s12_erjDhlZ726Q4ZWMnCkQPbmKFnRl9doDmUn5TxsDOwPL3UMeZU2r3X");'>
+</div>
+</div>
+<div class="flex flex-col gap-1 items-start">
+<p class="text-sm font-medium leading-normal bg-[#e7f3e8] dark:bg-gray-800 text-[#0d1b0f] dark:text-white rounded-2xl rounded-bl-none px-4 py-3 shadow-sm">
+                        Hello! The maize crops are growing well after the recent rain.
+                    </p>
+<span class="text-[10px] text-gray-500 ml-1">10:42 AM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end justify-end gap-3 ml-auto max-w-[85%]">
+<div class="flex flex-col gap-1 items-end">
+<p class="text-sm font-medium leading-normal bg-primary text-white rounded-2xl rounded-br-none px-4 py-3 shadow-md">
+                        That's great news, Kofi. How is the soil moisture level in the north field?
+                    </p>
+<div class="flex items-center gap-1">
+<span class="text-[10px] text-gray-500 mr-1">11:05 AM</span>
+<span class="material-symbols-outlined text-primary text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+<!-- Date Divider -->
+<div class="flex justify-center">
+<p class="text-[#4c9a52] text-xs font-semibold uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Today</p>
+</div>
+<!-- Received Message with Image -->
+<div class="flex items-end gap-3 max-w-[85%]">
+<div class="size-8 shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Small profile icon of the farmer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsqwjq2tQsuVJfvYKVbi-6QncuvAloQq98jcVFLnGx9zWnx_T3SP4VvOItj_BRQCdkhWWVp3J81rmI_ZXKsijFLlbZYdU4rzpSJ7wEt9niKPm8UMbm2fPZZ3qcRFnUk1R4Hl1XCG9i8bnOcjYC6isYbScxUftRKNO03nIb9EMWTA0ZW3HkoM5QJUA-SalASok1d3rIRJQVZGgzZhTogc7F9U_MJU_UcT6Tp-PjfWNrmKAcvdJ2e1o_IDfP3kEB0W-y4hdMAvBbUuVk");'>
+</div>
+</div>
+<div class="flex flex-col gap-2 items-start w-full">
+<div class="bg-[#e7f3e8] dark:bg-gray-800 p-2 rounded-2xl rounded-bl-none shadow-sm w-full">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-xl w-full" data-alt="Lush green maize field under a bright sun" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1iiTMa2cftTYsHem9HSMU2h6W1VpsWWwmEOL4EaalUgn5pJJvr8bWI_2bE8YzniI6k9DZQhpgvN1S0PcX6Vfd9z5XpC-10vtvYRB6tLQl5nU5ooXGoiHbBMYN73StQVjxCCYX20TUg6CAFAEz4-5TxIxCsak6YcporVUbzMV5LArcKGs4VMfJTXQQjEmMmWvUINhPoq0SFqXeRJ-6lQ_PQrgf5rg0klZfHK68fdeoppm8kegcYbaoeVOZyGOXWkFFT_S4aIKz4oGw");'>
+</div>
+<p class="text-sm font-medium leading-normal text-[#0d1b0f] dark:text-white px-2 pt-2 pb-1">
+                            North field is doing excellent. Moisture levels are perfect for this stage of growth.
+                        </p>
+</div>
+<span class="text-[10px] text-gray-500 ml-1">08:15 AM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end justify-end gap-3 ml-auto max-w-[85%]">
+<div class="flex flex-col gap-1 items-end">
+<p class="text-sm font-medium leading-normal bg-primary text-white rounded-2xl rounded-br-none px-4 py-3 shadow-md">
+                        The progress looks impressive! Keep up the good work. I'll check the investment dashboard for the monthly report.
+                    </p>
+<div class="flex items-center gap-1">
+<span class="text-[10px] text-gray-500 mr-1">09:30 AM</span>
+<span class="material-symbols-outlined text-primary text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Input Bar -->
+<footer class="p-4 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined">photo_camera</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full bg-gray-100 dark:bg-gray-800 border-none rounded-full px-5 py-3 text-sm focus:ring-2 focus:ring-primary/50 dark:text-white placeholder:text-gray-500" placeholder="Message..." type="text"/>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+<!-- Safe Area Spacer for iOS -->
+<div class="h-4"></div>
+</footer>
+</div>
+</body></html>

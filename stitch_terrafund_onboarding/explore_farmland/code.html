@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explore Farmland</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d421",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b0f] dark:text-white font-display">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">potted_plant</span>
+<h1 class="text-[#0d1b0f] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Explore Lands</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full bg-white dark:bg-white/10 shadow-sm">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white">search</span>
+</button>
+<button class="p-2 rounded-full bg-white dark:bg-white/10 shadow-sm relative">
+<span class="material-symbols-outlined text-[#0d1b0f] dark:text-white">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-primary"></span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 mt-4 overflow-x-auto no-scrollbar pb-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary text-white px-4">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<p class="text-sm font-semibold leading-normal">Filters</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/10 px-4 border border-gray-100 dark:border-white/5">
+<span class="material-symbols-outlined text-sm">agriculture</span>
+<p class="text-sm font-medium leading-normal">Crop</p>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/10 px-4 border border-gray-100 dark:border-white/5">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm font-medium leading-normal">Location</p>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/10 px-4 border border-gray-100 dark:border-white/5">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<p class="text-sm font-medium leading-normal">Risk</p>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Feed -->
+<main class="px-4 pb-24 space-y-6 overflow-y-auto">
+<!-- Card 1 -->
+<div class="group relative flex flex-col bg-white dark:bg-white/5 rounded-xl shadow-md border border-gray-100 dark:border-white/5 overflow-hidden">
+<div class="relative w-full aspect-[16/10] bg-center bg-no-repeat bg-cover" data-alt="Vibrant organic cocoa plantation with tall trees" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTMzob97wzOdbextG8kkBB6JD_9Vcnr4fqZYSqKq0eUTmIH5mE8130doxFGqal7qrNn2HwWZNhHe49a24nPp6u8RtFbXlUXc6Z5Ee9ZJLeaWX8iA3wz3MXBmA6Yrt-tZd8CjQR1J5ZdXxsgw6sjaevpxmJnTk73OJHBQ0rNUakVSbOAhwX6Xxic8TBAHI0pwGF3iZDFYeK4Q8jRh1hpU1Bsv-I6r9kaL2YNsfZTeKvMvMrQi59rjN8L-tKjC29QvB7DSotS3Gy4K6Z");'>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 dark:bg-black/60 backdrop-blur-md rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Ghana</span>
+</div>
+<div class="absolute top-4 right-4 px-3 py-1 bg-primary text-white rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">eco</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Cocoa</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">High Growth</p>
+<h3 class="text-xl font-extrabold text-[#0d1b0f] dark:text-white leading-tight">Organic Cocoa Plantation</h3>
+</div>
+<div class="bg-primary/10 px-2 py-1 rounded">
+<p class="text-primary text-xs font-bold">14.5% ROI</p>
+</div>
+</div>
+<p class="text-[#4c9a52] dark:text-gray-400 text-sm mb-4">Kumasi, Ashanti Region</p>
+<div class="grid grid-cols-2 gap-4 mb-5 border-t border-gray-50 dark:border-white/5 pt-4">
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">Min Investment</p>
+<p class="text-[#0d1b0f] dark:text-white font-bold">$5,000</p>
+</div>
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">Risk Level</p>
+<p class="text-[#0d1b0f] dark:text-white font-bold">Medium</p>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span>View Investment Details</span>
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col bg-white dark:bg-white/5 rounded-xl shadow-md border border-gray-100 dark:border-white/5 overflow-hidden">
+<div class="relative w-full aspect-[16/10] bg-center bg-no-repeat bg-cover" data-alt="Golden maize field under a blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCW3stKw_cvh6eN8sKfzcuwfxstYIncK6aDfWO4XN7opQLOF5g9HpNHoQR8k9FhAxXlmvrLcEe_rBL9GFZp3BaYM5NfyJGO8Jq0CHQJQAfhWWacC8wtM2pJV5hsVaHcLA5JceYwnl-CiKsCKEyzESBI6N6KTeEyva1jT2-aI4fZqi7erd8z8HsUwN9smEUnqlRIcgfsvq2B_ejAfWDKB5jLA21-Y6FvwkL2ONCD6KML_34w4ieZEWzEmD4PlfKDXtexCHj--Uplfx-O");'>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 dark:bg-black/60 backdrop-blur-md rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Kenya</span>
+</div>
+<div class="absolute top-4 right-4 px-3 py-1 bg-primary text-white rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">grain</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Maize</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Stable Return</p>
+<h3 class="text-xl font-extrabold text-[#0d1b0f] dark:text-white leading-tight">Premium Maize Farm</h3>
+</div>
+<div class="bg-primary/10 px-2 py-1 rounded">
+<p class="text-primary text-xs font-bold">11.2% ROI</p>
+</div>
+</div>
+<p class="text-[#4c9a52] dark:text-gray-400 text-sm mb-4">Nakuru County, Rift Valley</p>
+<div class="grid grid-cols-2 gap-4 mb-5 border-t border-gray-50 dark:border-white/5 pt-4">
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">Min Investment</p>
+<p class="text-[#0d1b0f] dark:text-white font-bold">$2,500</p>
+</div>
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">Risk Level</p>
+<p class="text-[#0d1b0f] dark:text-white font-bold">Low</p>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span>View Investment Details</span>
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col bg-white dark:bg-white/5 rounded-xl shadow-md border border-gray-100 dark:border-white/5 overflow-hidden">
+<div class="relative w-full aspect-[16/10] bg-center bg-no-repeat bg-cover" data-alt="Expansive wheat fields in South Africa" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgi0k0kK7EAVJlM4HPznIpFto02Hdr1OgTAWpp1UL2KyZekFzTUM-TK5T8h-XpAJiEZRujMP49MAOwU_yLfEH90L2mg9OwY9iRZTeplIGkkKNWju7vh4ydOjRPhGLbY5D9yPb4allCH02lJchdkLR2E2E0qS4opSHGNAfaRMb_L9dlps2qCkfF2t-5eZKW6U3mBNN0tJIeelQTpjY9Xt2QMaB2vWlAEJvfXa-9tTSY9cZEwkQnLuCrtaA4RKxll7fON535xrH5ZCdb");'>
+<div class="absolute top-4 left-4 px-3 py-1 bg-white/90 dark:bg-black/60 backdrop-blur-md rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">South Africa</span>
+</div>
+<div class="absolute top-4 right-4 px-3 py-1 bg-primary text-white rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">grass</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Wheat</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Low Risk</p>
+<h3 class="text-xl font-extrabold text-[#0d1b0f] dark:text-white leading-tight">Sustainable Wheat Field</h3>
+</div>
+<div class="bg-primary/10 px-2 py-1 rounded">
+<p class="text-primary text-xs font-bold">12.0% ROI</p>
+</div>
+</div>
+<p class="text-[#4c9a52] dark:text-gray-400 text-sm mb-4">Free State Province</p>
+<div class="grid grid-cols-2 gap-4 mb-5 border-t border-gray-50 dark:border-white/5 pt-4">
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">Min Investment</p>
+<p class="text-[#0d1b0f] dark:text-white font-bold">$8,000</p>
+</div>
+<div>
+<p class="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">Risk Level</p>
+<p class="text-[#0d1b0f] dark:text-white font-bold">Low</p>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span>View Investment Details</span>
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-gray-100 dark:border-white/5 px-6 pb-8 pt-3 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Portfolio</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Wallet</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TerraFund Onboarding</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d421",
+                "background-light": "#f6f8f6",
+                "background-dark": "#102212",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display">
+<!-- TopAppBar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-primary flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-[#0d1b0f] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">TerraFund</h2>
+</header>
+<main class="flex-1 flex flex-col px-4 max-w-md mx-auto w-full">
+<!-- HeadlineText -->
+<div class="py-8">
+<h1 class="text-[#0d1b0f] dark:text-white tracking-tight text-[32px] font-extrabold leading-tight text-center">
+                Invest in Land.<br/>Grow Together.
+            </h1>
+<p class="text-[#4c9a52] dark:text-primary/80 text-center mt-3 text-base">Select your role to get started with sustainable growth.</p>
+</div>
+<!-- Role Selection Cards -->
+<div class="space-y-4 flex-1">
+<!-- Investor Card -->
+<div class="p-1 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-[#1a2e1c] border border-transparent hover:border-primary transition-colors cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-[16/7] bg-cover rounded-t-xl relative overflow-hidden" data-alt="Lush green agricultural fields under bright sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkLkJlXIbue2MKlCpwIZed7L-ggsCsXGuLdRE7xqcKuac9YT1ltdpT2MgLXUGmz0DP_PZ_Xx5yRRsc1IqqDmhkb0H1RAH7tcj9C4v92Be2fH1RHMdWpXiwoiRMXyuEPnuy9_IrGIEep9bodSvb1SSBJjgsAQ4mNH0tTulTwBjfKovt2kLVB8psgczFBcK3e8vrPTP141R33y-_SkC5761byWfkrXMBkmIgkzVk3Ds4nqQGxoUGFyiYkaWQuBH3aREL9pqK1Kg5CG7p");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-background-dark/90 p-2 rounded-lg backdrop-blur">
+<span class="material-symbols-outlined text-primary text-2xl">trending_up</span>
+</div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-5">
+<p class="text-[#0d1b0f] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">I am an Investor</p>
+<div class="flex items-end gap-3 justify-between">
+<p class="text-[#4c9a52] dark:text-gray-400 text-sm font-normal leading-relaxed">Browse verified agricultural projects and build your green portfolio.</p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-sm active:scale-95 transition-transform">
+<span class="truncate">Select</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Land Owner Card -->
+<div class="p-1 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-[#1a2e1c] border border-transparent hover:border-primary transition-colors cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-[16/7] bg-cover rounded-t-xl relative overflow-hidden" data-alt="Modern tractor working on a large fertile field" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAc-mVE7tTe57i-neMfcv81O5tvKUGrQ6iZY_ijS1glWVuht7qR__evfJHnUOXOXCLvaC5sU4sqSpSuDd-LL6iOJoJ3XxJfBsHs_P9gK-DFWMFv_LkSGQWyUeEH6ka2MiKXv4ZGm5efgq0jg4G169C5ixI_i7Qd7EkI3yfbt_9hUu8c4UyzNEJT2EHRla9CIKEV9T-AoBMAdFv6XM9HvmONhByhIVg-dZEceuWAxDHxy-48wJsLZ7w390P2HNts3GJay31FyUoxw2p7");'>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-background-dark/90 p-2 rounded-lg backdrop-blur">
+<span class="material-symbols-outlined text-primary text-2xl">agriculture</span>
+</div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-5">
+<p class="text-[#0d1b0f] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">I am a Land Owner</p>
+<div class="flex items-end gap-3 justify-between">
+<p class="text-[#4c9a52] dark:text-gray-400 text-sm font-normal leading-relaxed">Access funding for your farm and scale your production efficiently.</p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-5 bg-primary text-white text-sm font-semibold leading-normal shadow-sm active:scale-95 transition-transform">
+<span class="truncate">Select</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MetaText / Login Footer -->
+<footer class="mt-auto py-8">
+<p class="text-[#4c9a52] dark:text-primary text-sm font-medium leading-normal text-center cursor-pointer hover:underline transition-all">
+                Already have an account? <span class="font-bold">Log In</span>
+</p>
+<!-- iOS Safe Area Spacer -->
+<div class="h-6"></div>
+</footer>
+</main>
+</body></html>
