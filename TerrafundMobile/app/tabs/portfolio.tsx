@@ -1,7 +1,7 @@
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function MyInvestmentPortfolio() {
     const router = useRouter();
@@ -174,7 +174,7 @@ export default function MyInvestmentPortfolio() {
                     <View className="py-10 items-center">
                         <TouchableOpacity
                             className="bg-primary flex-row items-center justify-center py-4 px-8 rounded-full shadow-lg shadow-primary/30 gap-2"
-                            onPress={() => router.push("/(tabs)/explore")}
+                            onPress={() => router.push("/tabs/explore")}
                         >
                             <MaterialIcons name="add" size={24} color="white" />
                             <Text className="text-white font-bold font-display">Invest in New Farm</Text>

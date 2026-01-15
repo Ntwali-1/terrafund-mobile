@@ -1,8 +1,8 @@
-import { View, Text, Image, TouchableOpacity, ScrollView, ImageBackground, Dimensions } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
+import { Image, ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function LandInvestmentDetails() {
     const router = useRouter();
@@ -210,7 +210,7 @@ export default function LandInvestmentDetails() {
                     </TouchableOpacity>
                     <TouchableOpacity
                         className="flex-[1.5] h-14 bg-primary rounded-xl shadow-lg shadow-primary/30 flex-row items-center justify-center gap-2"
-                        onPress={() => router.push("/(tabs)/wallet")}
+                        onPress={() => router.push("/tabs/wallet")}
                     >
                         <MaterialIcons name="account-balance-wallet" size={20} color="white" />
                         <Text className="text-white font-bold font-display">Invest Now</Text>

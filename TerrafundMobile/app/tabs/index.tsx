@@ -1,7 +1,7 @@
-import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function InvestorDashboard() {
   const router = useRouter();
@@ -51,14 +51,14 @@ export default function InvestorDashboard() {
                 <View className="flex-row gap-4">
                   <TouchableOpacity
                     className="flex-1 bg-primary py-3 rounded-lg flex-row items-center justify-center gap-2 shadow-sm"
-                    onPress={() => router.push("/(tabs)/explore")}
+                    onPress={() => router.push("/tabs/explore")}
                   >
                     <MaterialIcons name="add-circle" size={18} color="white" />
                     <Text className="text-white font-bold font-display">Invest</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                     className="flex-1 bg-neutral-100 dark:bg-neutral-800 py-3 rounded-lg flex-row items-center justify-center gap-2"
-                    onPress={() => router.push("/(tabs)/wallet")}
+                    onPress={() => router.push("/tabs/wallet")}
                   >
                     <MaterialIcons name="payments" size={18} color="#404040" />
                     <Text className="text-neutral-700 dark:text-neutral-200 font-bold font-display">Withdraw</Text>
@@ -82,7 +82,7 @@ export default function InvestorDashboard() {
           {/* Next Harvest Payout */}
           <View className="flex-row items-center justify-between px-4 pb-2 pt-4">
             <Text className="text-lg font-bold tracking-tight text-[#0d1b0f] dark:text-white font-display">Next Harvest Payout</Text>
-            <TouchableOpacity onPress={() => router.push("/(tabs)/portfolio")}>
+            <TouchableOpacity onPress={() => router.push("/tabs/portfolio")}>
               <Text className="text-primary text-sm font-bold font-display">View Calendar</Text>
             </TouchableOpacity>
           </View>
@@ -118,7 +118,7 @@ export default function InvestorDashboard() {
           {/* Portfolio Performance */}
           <View className="flex-row items-center justify-between px-4 pb-2 pt-4">
             <Text className="text-lg font-bold tracking-tight text-[#0d1b0f] dark:text-white font-display">Portfolio Performance</Text>
-            <TouchableOpacity onPress={() => router.push("/(tabs)/portfolio")}>
+            <TouchableOpacity onPress={() => router.push("/tabs/portfolio")}>
               <Text className="text-gray-400 text-sm font-medium font-display">All Time</Text>
             </TouchableOpacity>
           </View>

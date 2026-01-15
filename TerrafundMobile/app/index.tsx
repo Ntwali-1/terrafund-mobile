@@ -1,8 +1,8 @@
-import { View, Text, Image, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
-import { StatusBar } from 'expo-status-bar';
 import { useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function OnboardingScreen() {
     const router = useRouter();
@@ -40,7 +40,7 @@ export default function OnboardingScreen() {
                         <View className="p-1">
                             <TouchableOpacity
                                 className="flex-col rounded-xl shadow-sm bg-white dark:bg-[#1a2e1c] border border-transparent hover:border-primary overflow-hidden"
-                                onPress={() => router.push("/(tabs)/")}
+                                onPress={() => router.push("/tabs/")}
                             >
                                 <ImageBackground
                                     source={{ uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkLkJlXIbue2MKlCpwIZed7L-ggsCsXGuLdRE7xqcKuac9YT1ltdpT2MgLXUGmz0DP_PZ_Xx5yRRsc1IqqDmhkb0H1RAH7tcj9C4v92Be2fH1RHMdWpXiwoiRMXyuEPnuy9_IrGIEep7bodSvb1SSBJjgsAQ4mNH0tTulTwBjfKovt2kLVB8psgczFBcK3e8vrPTP141R33y-_SkC5761byWfkrXMBkmIgkzVk3Ds4nqQGxoUGFyiYkaWQuBH3aREL9pqK1Kg5CG7p" }}
@@ -72,7 +72,7 @@ export default function OnboardingScreen() {
                         <View className="p-1">
                             <TouchableOpacity
                                 className="flex-col rounded-xl shadow-sm bg-white dark:bg-[#1a2e1c] border border-transparent hover:border-primary overflow-hidden"
-                                onPress={() => router.push("/(tabs)/owner")}
+                                onPress={() => router.push("/tabs/owner")}
                             >
                                 <ImageBackground
                                     source={{ uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuAc-mVE7tTe57i-neMfcv81O5tvKUGrQ6iZY_ijS1glWVuht7qR__evfJHnUOXOXCLvaC5sU4sqSpSuDd-LL6iOJoJ3XxJfBsHs_P9gK-DFWMFv_LkSGQWyUeEH6ka2MiKXv4ZGm5efgq0jg4G169C5ixI_i7Qd7EkI3yfbt_9hUu8c4UyzNEJT2Ela9CIKEV9T-AoBMAdFv6XM9HvmONhByhIVg-dZEceuWAxDHxy-48wJsLZ7w390P2HNts3GJay31FyUoxw2p7" }}
@@ -105,7 +105,7 @@ export default function OnboardingScreen() {
                     {/* Footer */}
                     <View className="mt-8 py-8">
                         <Text className="text-[#4c9a52] dark:text-primary text-sm font-medium text-center font-display">
-                            Already have an account? <Text className="font-bold" onPress={() => router.push('/(tabs)/')}>Log In</Text>
+                            Already have an account? <Text className="font-bold" onPress={() => router.push('/tabs/')}>Log In</Text>
                         </Text>
                     </View>
 

@@ -1,7 +1,7 @@
-import { View, Text, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function PostLandDetails() {
     const router = useRouter();
@@ -137,7 +137,7 @@ export default function PostLandDetails() {
                 <View className="absolute bottom-0 w-full p-4 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800">
                     <TouchableOpacity
                         className="w-full bg-primary h-16 rounded-xl shadow-lg shadow-primary/20 flex-row items-center justify-center gap-2"
-                        onPress={() => router.push("/(tabs)/owner")}
+                        onPress={() => router.push("/tabs/owner")}
                     >
                         <Text className="text-white font-extrabold text-lg font-display">Continue to Pricing</Text>
                         <MaterialIcons name="arrow-forward" size={24} color="white" />
