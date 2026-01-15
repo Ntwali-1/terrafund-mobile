@@ -2,6 +2,7 @@
 module.exports = {
   // NOTE: Pre-configured NativeWind content paths
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
   theme: {
     extend: {
       colors: {

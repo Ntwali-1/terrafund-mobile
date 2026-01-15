@@ -1,114 +1,122 @@
-import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView, Platform, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
 export default function InvestorDashboard() {
   const router = useRouter();
+  
   return (
-    <SafeAreaView className="flex-1 bg-background-light dark:bg-background-dark" edges={['top']}>
-      <View className="flex-1 relative">
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <View style={styles.mainWrapper}>
         {/* Top Navigation */}
-        <View className="flex-row items-center justify-between px-4 py-4 bg-background-light/80 dark:bg-background-dark/80 z-50">
-          <View className="flex-row items-center gap-3">
-            <View className="size-10 rounded-full border-2 border-primary overflow-hidden">
+        <View style={styles.topNav}>
+          <View style={styles.userSection}>
+            <View style={styles.avatarContainer}>
               <Image
                 source={{ uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuDngqmI_FRzt9L0An8Ra22-n-2IMCakdaopKbvZz1ua4D5Y_fmjjN0ySqPXC8fLmN6xM19KEWtIclzRPTQoe7Eg_L66JUZ30gTtiB20t00NQGPCTt20Fn3JJ6eFfHOL_CLHmRdmPO2gUH6OZ89Y2pmi_52G5vQiOFauk9U6NwnGNf1jFDzhYzyUzDonXhJkKN9PqvR668xWiBogxaFLffFEnEJddw8rm_4LShtrGjoC_DaYm1ZZORAyZJMQdpNMEoIXXj4U_P3UNpti" }}
-                className="w-full h-full"
+                style={styles.avatar}
               />
             </View>
             <View>
-              <Text className="text-xs text-gray-500 dark:text-gray-400 font-medium font-display">Welcome back,</Text>
-              <Text className="text-sm font-bold leading-none text-[#0d1b0f] dark:text-white font-display">Alex Mitchell</Text>
+              <Text style={styles.welcomeText}>Welcome back,</Text>
+              <Text style={styles.userName}>Alex Mitchell</Text>
             </View>
           </View>
-          <TouchableOpacity className="size-10 items-center justify-center rounded-full bg-white dark:bg-neutral-800 shadow-sm">
+          <TouchableOpacity style={styles.notificationButton}>
             <MaterialIcons name="notifications" size={22} color="#0d1b0f" />
           </TouchableOpacity>
         </View>
 
-        <ScrollView contentContainerClassName="pb-24">
+        <ScrollView 
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.scrollContent}
+        >
           {/* Hero Wallet Card */}
-          <View className="p-4">
-            <View className="rounded-xl shadow-sm bg-white dark:bg-neutral-900 border border-black/5 dark:border-white/5 overflow-hidden">
-              <View className="p-6">
-                <View className="flex-row justify-between items-start mb-4">
+          <View style={styles.section}>
+            <View style={[styles.walletCard, styles.cardShadow]}>
+              <View style={styles.walletCardContent}>
+                <View style={styles.walletHeader}>
                   <View>
-                    <Text className="text-gray-500 dark:text-gray-400 text-sm font-medium font-display">Total Invested</Text>
-                    <Text className="text-3xl font-extrabold tracking-tight mt-1 text-[#0d1b0f] dark:text-white font-display">$42,850.00</Text>
+                    <Text style={styles.walletLabel}>Total Invested</Text>
+                    <Text style={styles.walletAmount}>$42,850.00</Text>
                   </View>
-                  <View className="bg-primary/10 p-2 rounded-lg">
+                  <View style={styles.walletIconContainer}>
                     <MaterialIcons name="account-balance-wallet" size={24} color="#11d421" />
                   </View>
                 </View>
-                <View className="flex-row items-center gap-2 mb-6">
-                  <View className="flex-row items-center bg-primary/10 px-2 py-1 rounded-full">
+                
+                <View style={styles.performanceContainer}>
+                  <View style={styles.performanceBadge}>
                     <MaterialIcons name="trending-up" size={12} color="#11d421" />
-                    <Text className="text-xs font-bold text-primary ml-1 font-display">+12.5%</Text>
+                    <Text style={styles.performanceText}>+12.5%</Text>
                   </View>
-                  <Text className="text-xs text-gray-400 font-display">vs last quarter</Text>
+                  <Text style={styles.performanceSubtext}>vs last quarter</Text>
                 </View>
-                <View className="flex-row gap-4">
+                
+                <View style={styles.buttonRow}>
                   <TouchableOpacity
-                    className="flex-1 bg-primary py-3 rounded-lg flex-row items-center justify-center gap-2 shadow-sm"
+                    style={[styles.primaryButton, styles.buttonShadow]}
                     onPress={() => router.push("/(tabs)/explore")}
                   >
                     <MaterialIcons name="add-circle" size={18} color="white" />
-                    <Text className="text-white font-bold font-display">Invest</Text>
+                    <Text style={styles.primaryButtonText}>Invest</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
-                    className="flex-1 bg-neutral-100 dark:bg-neutral-800 py-3 rounded-lg flex-row items-center justify-center gap-2"
+                    style={styles.secondaryButton}
                     onPress={() => router.push("/(tabs)/wallet")}
                   >
                     <MaterialIcons name="payments" size={18} color="#404040" />
-                    <Text className="text-neutral-700 dark:text-neutral-200 font-bold font-display">Withdraw</Text>
+                    <Text style={styles.secondaryButtonText}>Withdraw</Text>
                   </TouchableOpacity>
                 </View>
               </View>
+              
               {/* Mini Stats Overlay */}
-              <View className="flex-row border-t border-black/5 dark:border-white/5 bg-neutral-50/50 dark:bg-neutral-800/50">
-                <View className="flex-1 p-4 items-center border-r border-black/5 dark:border-white/5">
-                  <Text className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-display">Active Farms</Text>
-                  <Text className="font-bold text-[#0d1b0f] dark:text-white font-display">14</Text>
+              <View style={styles.statsOverlay}>
+                <View style={styles.statItem}>
+                  <Text style={styles.statLabel}>Active Farms</Text>
+                  <Text style={styles.statValue}>14</Text>
                 </View>
-                <View className="flex-1 p-4 items-center">
-                  <Text className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-display">Total Profit</Text>
-                  <Text className="font-bold text-primary font-display">+$5,120.40</Text>
+                <View style={styles.statDivider} />
+                <View style={styles.statItem}>
+                  <Text style={styles.statLabel}>Total Profit</Text>
+                  <Text style={styles.statValueProfit}>+$5,120.40</Text>
                 </View>
               </View>
             </View>
           </View>
 
           {/* Next Harvest Payout */}
-          <View className="flex-row items-center justify-between px-4 pb-2 pt-4">
-            <Text className="text-lg font-bold tracking-tight text-[#0d1b0f] dark:text-white font-display">Next Harvest Payout</Text>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Next Harvest Payout</Text>
             <TouchableOpacity onPress={() => router.push("/(tabs)/portfolio")}>
-              <Text className="text-primary text-sm font-bold font-display">View Calendar</Text>
+              <Text style={styles.sectionLink}>View Calendar</Text>
             </TouchableOpacity>
           </View>
 
-          <View className="p-4">
-            <View className="bg-white dark:bg-neutral-900 rounded-xl p-4 shadow-sm border border-black/5 dark:border-white/5">
-              <View className="flex-row gap-4 items-center">
+          <View style={styles.section}>
+            <View style={[styles.harvestCard, styles.cardShadow]}>
+              <View style={styles.harvestContent}>
                 <Image
                   source={{ uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuBG6pkj0nf3Yb5m7ydxIIPrNmg4wqjDqJ8Dy5MdcM4RB_4GB5_6ORxlAfMBb9ltlf7f6Tb6xmRjvdsF13fmIYLuG7ONbtVKnATf9H4n8XzxjEMMgVn_cg8AXJFRwcFlnj4H4qr4kLQrFlYsQauSfYOMi_1qI0tNAY3h3aB8sWGm5VnBOwDazXsAJLHiWq7ur6F2OJ5tE9Iq5-XPBCxK0ctCU3z5rNkYgczrcpvTxxobfDLr7JpnsBndo5lE2uY5H0jZJghkbSrlqFd6" }}
-                  className="size-20 rounded-lg"
+                  style={styles.harvestImage}
                 />
-                <View className="flex-1">
-                  <View className="flex-row justify-between items-start">
-                    <Text className="font-bold text-base text-[#0d1b0f] dark:text-white font-display">Maize Plantation #42</Text>
-                    <View className="bg-primary/10 px-2 py-0.5 rounded">
-                      <Text className="text-[10px] font-bold uppercase tracking-widest text-primary font-display">85% Maturation</Text>
+                <View style={styles.harvestInfo}>
+                  <View style={styles.harvestHeader}>
+                    <Text style={styles.harvestTitle}>Maize Plantation #42</Text>
+                    <View style={styles.maturationBadge}>
+                      <Text style={styles.maturationText}>85% MATURATION</Text>
                     </View>
                   </View>
-                  <Text className="text-sm text-gray-500 dark:text-gray-400 mt-1 font-display">
-                    Expected: <Text className="text-[#0d1b0f] dark:text-white font-bold">$1,240.00</Text>
+                  <Text style={styles.expectedText}>
+                    Expected: <Text style={styles.expectedAmount}>$1,240.00</Text>
                   </Text>
-                  <View className="mt-3 flex-row items-center gap-2">
-                    <View className="flex-1 h-1.5 bg-neutral-100 dark:bg-neutral-800 rounded-full overflow-hidden">
-                      <View className="bg-primary h-full w-[85%]" />
+                  <View style={styles.progressContainer}>
+                    <View style={styles.progressBar}>
+                      <View style={styles.progressFill} />
                     </View>
-                    <Text className="text-[11px] font-bold text-gray-400 font-display">12 Days</Text>
+                    <Text style={styles.daysText}>12 Days</Text>
                   </View>
                 </View>
               </View>
@@ -116,64 +124,474 @@ export default function InvestorDashboard() {
           </View>
 
           {/* Portfolio Performance */}
-          <View className="flex-row items-center justify-between px-4 pb-2 pt-4">
-            <Text className="text-lg font-bold tracking-tight text-[#0d1b0f] dark:text-white font-display">Portfolio Performance</Text>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Portfolio Performance</Text>
             <TouchableOpacity onPress={() => router.push("/(tabs)/portfolio")}>
-              <Text className="text-gray-400 text-sm font-medium font-display">All Time</Text>
+              <Text style={styles.sectionSublink}>All Time</Text>
             </TouchableOpacity>
           </View>
 
-          <View className="flex-row flex-wrap gap-4 p-4">
-            <View className="flex-1 min-w-[140px] flex-col gap-1 rounded-xl p-5 border border-black/5 dark:border-white/5 bg-white dark:bg-neutral-900 shadow-sm">
-              <View className="flex-row items-center justify-between mb-2">
+          <View style={styles.metricsRow}>
+            <View style={[styles.metricCard, styles.cardShadow]}>
+              <View style={styles.metricIconContainer}>
                 <MaterialIcons name="local-florist" size={24} color="#11d421" />
               </View>
-              <Text className="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider font-display">Acres Funded</Text>
-              <Text className="text-xl font-bold text-[#0d1b0f] dark:text-white font-display">124.5</Text>
+              <Text style={styles.metricLabel}>ACRES FUNDED</Text>
+              <Text style={styles.metricValue}>124.5</Text>
             </View>
-            <View className="flex-1 min-w-[140px] flex-col gap-1 rounded-xl p-5 border border-black/5 dark:border-white/5 bg-white dark:bg-neutral-900 shadow-sm">
-              <View className="flex-row items-center justify-between mb-2">
+            <View style={[styles.metricCard, styles.cardShadow]}>
+              <View style={styles.metricIconContainer}>
                 <MaterialIcons name="people" size={24} color="#11d421" />
               </View>
-              <Text className="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider font-display">Farmers Supported</Text>
-              <Text className="text-xl font-bold text-[#0d1b0f] dark:text-white font-display">8</Text>
+              <Text style={styles.metricLabel}>FARMERS SUPPORTED</Text>
+              <Text style={styles.metricValue}>8</Text>
             </View>
           </View>
 
           {/* Recent Activity */}
-          <View className="px-4 pb-2 pt-4">
-            <Text className="text-lg font-bold tracking-tight mb-4 text-[#0d1b0f] dark:text-white font-display">Recent Activity</Text>
-            <View className="space-y-3">
-              <View className="flex-row items-center justify-between p-3 bg-white dark:bg-neutral-900 rounded-xl border border-black/5 dark:border-white/5">
-                <View className="flex-row items-center gap-3">
-                  <View className="size-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 items-center justify-center">
+          <View style={styles.activitySection}>
+            <Text style={styles.sectionTitle}>Recent Activity</Text>
+            <View style={styles.activityList}>
+              <View style={[styles.activityItem, styles.cardShadow]}>
+                <View style={styles.activityLeft}>
+                  <View style={styles.activityIconOrange}>
                     <MaterialIcons name="spa" size={20} color="#ea580c" />
                   </View>
                   <View>
-                    <Text className="text-sm font-bold text-[#0d1b0f] dark:text-white font-display">New Investment</Text>
-                    <Text className="text-xs text-gray-400 font-display">Cassava Farm #08 • 2h ago</Text>
+                    <Text style={styles.activityTitle}>New Investment</Text>
+                    <Text style={styles.activitySubtitle}>Cassava Farm #08 • 2h ago</Text>
                   </View>
                 </View>
-                <Text className="text-sm font-bold text-red-500 font-display">-$500.00</Text>
+                <Text style={styles.activityAmountNegative}>-$500.00</Text>
               </View>
 
-              <View className="flex-row items-center justify-between p-3 bg-white dark:bg-neutral-900 rounded-xl border border-black/5 dark:border-white/5">
-                <View className="flex-row items-center gap-3">
-                  <View className="size-10 rounded-lg bg-primary/10 items-center justify-center">
+              <View style={[styles.activityItem, styles.cardShadow]}>
+                <View style={styles.activityLeft}>
+                  <View style={styles.activityIconGreen}>
                     <MaterialIcons name="savings" size={20} color="#11d421" />
                   </View>
                   <View>
-                    <Text className="text-sm font-bold text-[#0d1b0f] dark:text-white font-display">Harvest Payout</Text>
-                    <Text className="text-xs text-gray-400 font-display">Rice Fields G-4 • Yesterday</Text>
+                    <Text style={styles.activityTitle}>Harvest Payout</Text>
+                    <Text style={styles.activitySubtitle}>Rice Fields G-4 • Yesterday</Text>
                   </View>
                 </View>
-                <Text className="text-sm font-bold text-primary font-display">+$840.50</Text>
+                <Text style={styles.activityAmountPositive}>+$840.50</Text>
               </View>
             </View>
           </View>
-
         </ScrollView>
       </View>
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f9fafb',
+  },
+  mainWrapper: {
+    flex: 1,
+    position: 'relative',
+  },
+  topNav: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 16,
+    backgroundColor: 'rgba(249, 250, 251, 0.8)',
+    zIndex: 50,
+  },
+  userSection: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  avatarContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: '#11d421',
+    overflow: 'hidden',
+  },
+  avatar: {
+    width: '100%',
+    height: '100%',
+  },
+  welcomeText: {
+    fontSize: 12,
+    color: '#6b7280',
+    fontWeight: '500',
+  },
+  userName: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#0d1b0f',
+    lineHeight: 16,
+  },
+  notificationButton: {
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+    backgroundColor: '#ffffff',
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
+      },
+      android: {
+        elevation: 2,
+      },
+    }),
+  },
+  scrollContent: {
+    paddingBottom: 96,
+  },
+  section: {
+    paddingHorizontal: 16,
+    marginBottom: 8,
+  },
+  cardShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 3,
+      },
+      android: {
+        elevation: 2,
+      },
+    }),
+  },
+  buttonShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.1,
+        shadowRadius: 2,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+  walletCard: {
+    borderRadius: 12,
+    backgroundColor: '#ffffff',
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.05)',
+    overflow: 'hidden',
+  },
+  walletCardContent: {
+    padding: 24,
+  },
+  walletHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: 16,
+  },
+  walletLabel: {
+    color: '#6b7280',
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  walletAmount: {
+    fontSize: 30,
+    fontWeight: '800',
+    color: '#0d1b0f',
+    marginTop: 4,
+    letterSpacing: -0.5,
+  },
+  walletIconContainer: {
+    backgroundColor: 'rgba(17, 212, 33, 0.1)',
+    padding: 8,
+    borderRadius: 8,
+  },
+  performanceContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 24,
+  },
+  performanceBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(17, 212, 33, 0.1)',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  performanceText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#11d421',
+    marginLeft: 4,
+  },
+  performanceSubtext: {
+    fontSize: 12,
+    color: '#9ca3af',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    gap: 16,
+  },
+  primaryButton: {
+    flex: 1,
+    backgroundColor: '#11d421',
+    paddingVertical: 12,
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  primaryButtonText: {
+    color: '#ffffff',
+    fontWeight: '700',
+    fontSize: 15,
+  },
+  secondaryButton: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+    paddingVertical: 12,
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  secondaryButtonText: {
+    color: '#404040',
+    fontWeight: '700',
+    fontSize: 15,
+  },
+  statsOverlay: {
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(0, 0, 0, 0.05)',
+    backgroundColor: 'rgba(245, 245, 245, 0.5)',
+  },
+  statItem: {
+    flex: 1,
+    padding: 16,
+    alignItems: 'center',
+  },
+  statDivider: {
+    width: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+  },
+  statLabel: {
+    fontSize: 12,
+    color: '#6b7280',
+    marginBottom: 4,
+  },
+  statValue: {
+    fontWeight: '700',
+    color: '#0d1b0f',
+    fontSize: 15,
+  },
+  statValueProfit: {
+    fontWeight: '700',
+    color: '#11d421',
+    fontSize: 15,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingBottom: 8,
+    paddingTop: 16,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#0d1b0f',
+    letterSpacing: -0.3,
+  },
+  sectionLink: {
+    color: '#11d421',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  sectionSublink: {
+    color: '#9ca3af',
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  harvestCard: {
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.05)',
+  },
+  harvestContent: {
+    flexDirection: 'row',
+    gap: 16,
+    alignItems: 'center',
+  },
+  harvestImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 8,
+  },
+  harvestInfo: {
+    flex: 1,
+  },
+  harvestHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: 4,
+  },
+  harvestTitle: {
+    fontWeight: '700',
+    fontSize: 16,
+    color: '#0d1b0f',
+    flex: 1,
+  },
+  maturationBadge: {
+    backgroundColor: 'rgba(17, 212, 33, 0.1)',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  maturationText: {
+    fontSize: 9,
+    fontWeight: '700',
+    color: '#11d421',
+    letterSpacing: 1,
+  },
+  expectedText: {
+    fontSize: 14,
+    color: '#6b7280',
+    marginTop: 4,
+  },
+  expectedAmount: {
+    color: '#0d1b0f',
+    fontWeight: '700',
+  },
+  progressContainer: {
+    marginTop: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  progressBar: {
+    flex: 1,
+    height: 6,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 3,
+    overflow: 'hidden',
+  },
+  progressFill: {
+    backgroundColor: '#11d421',
+    height: '100%',
+    width: '85%',
+  },
+  daysText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#9ca3af',
+  },
+  metricsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 16,
+    paddingHorizontal: 16,
+  },
+  metricCard: {
+    flex: 1,
+    minWidth: 140,
+    flexDirection: 'column',
+    borderRadius: 12,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.05)',
+    backgroundColor: '#ffffff',
+  },
+  metricIconContainer: {
+    marginBottom: 8,
+  },
+  metricLabel: {
+    color: '#6b7280',
+    fontSize: 11,
+    fontWeight: '500',
+    letterSpacing: 1,
+    marginBottom: 4,
+  },
+  metricValue: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#0d1b0f',
+  },
+  activitySection: {
+    paddingHorizontal: 16,
+    paddingBottom: 8,
+    paddingTop: 16,
+  },
+  activityList: {
+    gap: 12,
+    marginTop: 16,
+  },
+  activityItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 12,
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.05)',
+  },
+  activityLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  activityIconOrange: {
+    width: 40,
+    height: 40,
+    borderRadius: 8,
+    backgroundColor: 'rgba(234, 88, 12, 0.1)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  activityIconGreen: {
+    width: 40,
+    height: 40,
+    borderRadius: 8,
+    backgroundColor: 'rgba(17, 212, 33, 0.1)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  activityTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#0d1b0f',
+  },
+  activitySubtitle: {
+    fontSize: 12,
+    color: '#9ca3af',
+  },
+  activityAmountNegative: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#ef4444',
+  },
+  activityAmountPositive: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#11d421',
+  },
+});
